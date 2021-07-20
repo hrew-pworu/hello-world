@@ -1,0 +1,26 @@
+试编一自定义函数：将大于整数m且紧靠m的k个素数存入数组a中(将数组a作为参数)
+在主函数中输入m以及k的值，调用自定义函数
+void fun(int m,int k, int a[])
+{
+	int i,n,data;
+	data=m+1;
+	n=0;
+	while(n<k)
+	{
+		for(i=2;i<data;i++)
+			if(data%i==0)
+				break;
+			if(i>=data)
+				a[n++]=data;
+				data++;
+	}
+	for(i=0;i<k;i++)
+		printf("大于%d的第%d个素数为%d\n",m,i+1,a[i]);
+}
+int main()
+{
+	int m,k,a[20];
+	scanf("%d%d",&m,&k);
+	fun(m,k,a);
+	return 0;
+}
