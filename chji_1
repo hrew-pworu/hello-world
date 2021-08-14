@@ -1,3 +1,5 @@
+//Through classroom practice， strengthen and promote the internalization.
+
 #include <stdio.h>
 int fun(int a[])
 {
